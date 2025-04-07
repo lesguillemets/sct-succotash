@@ -12,7 +12,7 @@ from unicodedata import normalize
 # 大人は25だけ
 
 def main():
-    df = pd.read_csv("../source.csv", header=1, dtype=str)
+    df = pd.read_csv("./source.csv", header=1, dtype=str)
     df['parsed_age'] = df['年齢'].apply(Age.age_parser)
     df['parsed_age_year'] = df['parsed_age'].apply(lambda x: x.y)
     df['parsed_age_month'] = df['parsed_age'].apply(lambda x: x.m)
