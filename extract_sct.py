@@ -55,7 +55,7 @@ class Age:
         self.y = y
         self.m = m
 
-    def __repl__(self):
+    def __repr__(self):
         return f"{self.y}-{self.m}"
 
     def is_definitely_elementary(self) -> bool:
